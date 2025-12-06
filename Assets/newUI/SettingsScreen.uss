@@ -1,0 +1,33 @@
+:root {
+    --shinyColor: red;
+    --darkColor: rgb(150, 100, 100);
+}
+
+Label.header {
+    -unity-font-definition: url("project://database/Assets/Materials/fonts/NotoSans-VariableFont_wdth,wght.ttf?fileID=12800000&guid=856393b933970d749b5d78e9c2d4b617&type=3#NotoSans-VariableFont_wdth,wght");
+    font-size: 92px;
+    -unity-font-style: bold;
+    left: 8%;
+    top: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: var(--shinyColor);
+}
+
+.darkBackground {
+    background-color: var(--darkColor);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+}
+
+Label.settings {
+    left: 150px;
+    font-size: 57px;
+    -unity-font-definition: url("project://database/Assets/Materials/fonts/NotoSans-VariableFont_wdth,wght.ttf?fileID=12800000&guid=856393b933970d749b5d78e9c2d4b617&type=3#NotoSans-VariableFont_wdth,wght");
+    color: var(--shinyColor);
+}
+
+VisualElement.setting {
+    justify-content: space-around;
+    align-self: stretch;
+    flex-direction: row;
+}

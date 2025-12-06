@@ -1,0 +1,20 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/newUI/SettingsScreen.uss?fileID=7433441132597879392&amp;guid=45f858c3f73f03242bbf3e5c76092b84&amp;type=3#SettingsScreen" />
+    <engine:VisualElement name="Settings" class="darkBackground" style="flex-grow: 1; background-image: none; -unity-background-image-tint-color: rgba(0, 0, 0, 0);">
+        <engine:Label text="Settings&#10;" name="Title" class="header" style="-unity-font-definition: url(&quot;project://database/Assets/Materials/fonts/NotoSans-VariableFont_wdth,wght.ttf?fileID=12800000&amp;guid=856393b933970d749b5d78e9c2d4b617&amp;type=3#NotoSans-VariableFont_wdth,wght&quot;); font-size: 120px; left: 5%;" />
+        <engine:VisualElement name="AudioSettings" class="shinyBackground" style="align-self: stretch; -unity-background-image-tint-color: rgba(255, 255, 255, 0);">
+            <engine:Label text="Audio&#10;" name="Audio" class="header" />
+            <engine:VisualElement class="setting" style="flex-grow: 1; flex-direction: row; justify-content: space-around; align-self: stretch; -unity-background-image-tint-color: rgba(255, 255, 255, 0);">
+                <engine:Label text="Mute" class="settings" />
+                <engine:Toggle toggle-on-label-click="true" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="PrivacySettings" style="-unity-background-image-tint-color: rgba(255, 255, 255, 0);">
+            <engine:Label text="Privacy" name="Privacy" class="header" />
+            <engine:VisualElement class="setting" style="flex-grow: 1; -unity-background-image-tint-color: rgba(255, 255, 255, 0);">
+                <engine:Label text="Stop Collecting Data" class="settings" />
+                <engine:Toggle toggle-on-label-click="true" name="CollectDataToggle" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,76 @@
+/* Container layout */
+.setting-item {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  gap: 12px;
+}
+
+/* Label */
+.setting-label {
+  font-size: 16px;
+  color: #ffffff;
+  flex-grow: 1;
+}
+
+/* Hide the default Toggle visuals (we still use its value) */
+.real-toggle {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* SWITCH root */
+.switch {
+  width: 56px;
+  height: 34px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Track (background) */
+.switch .track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: #374151; /* grey when off */
+  transition: background-color 200ms ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* Thumb (circle) */
+.switch .thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  transition: transform 200ms cubic-bezier(.2,.9,.3,1), background-color 200ms;
+  transform: translateX(0);
+}
+
+/* ON state modifier (applied on switchRoot when toggle is true) */
+.switch.on .track {
+  background-color: #10B981; /* green when on */
+}
+
+.switch.on .thumb {
+  transform: translateX(22px); /* move to the right */
+  background-color: white;
+}
+
+/* Optional: smaller variant */
+.switch.small {
+  width: 44px; height: 26px;
+}
+.switch.small .thumb { width: 20px; height: 20px; top: 3px; left: 3px; transform: translateX(0); }
+.switch.small.on .thumb { transform: translateX(18px); }
