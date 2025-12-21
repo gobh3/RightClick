@@ -71,7 +71,7 @@ public class GameStateController : MonoBehaviour
     {
         OnGameContinues?.Invoke();
         state = GameState.InGame;
-        //print("Game Continues...");
+        Debug.Log($"GameContinues called on instance {GetInstanceID()}");
     }
 
     public void InformNewGameStart()
