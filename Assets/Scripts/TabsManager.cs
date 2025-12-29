@@ -20,7 +20,7 @@ public class TabManager : MonoBehaviour
     private int activeTabIndex = 0;
     private Coroutine underlineCoroutine;
 
-    void Start()
+    void Awake()
     {
         // Clamp defaultTabIndex to valid range
         defaultTabIndex = Mathf.Clamp(defaultTabIndex, 0, tabs.Count - 1);

@@ -14,7 +14,7 @@ public class PriceDisplay : MonoBehaviour
     [Header("Optional Formatting")]
     public string pricePrefix = "";
     public string priceSuffix = "";
-    public bool filterPrice = true;
+    public bool filterPrice = false;
 
     /// <summary>
     /// Call this from IAP Button's OnProductFetched event
