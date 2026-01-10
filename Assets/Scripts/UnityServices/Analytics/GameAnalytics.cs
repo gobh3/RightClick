@@ -21,6 +21,7 @@ public class GameAnalytics : MonoBehaviour
     private const int CONSENT_GRANTED = 1;
 
     //For privacy Policy compliance, we need to ask for consent
+    public bool DEFAULT_ANALYTICS_CONSENT = false; // Default to false for privacy
     public string TITLE = "Analytics Consent";
     public string MESSAGE = "Do you allow anonymous analytics to be collected to improve the game? You can change this later in settings.";
     public ConfirmationDialog confirmationDialogPrefab;
@@ -28,11 +29,6 @@ public class GameAnalytics : MonoBehaviour
     public UnityEvent<bool> OnAnalyticsActive;
     public float dialogDelaySeconds = 5f; // Delay before showing the dialog
 
-    void Start()
-    {
-        // Load saved consent preference on start
-        LoadAnalyticsConsent();
-    }
 
     public async void Initialize()
     {
@@ -43,6 +39,7 @@ public class GameAnalytics : MonoBehaviour
                 await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
             initialized = true;
+            LoadAnalyticsConsent();
             Debug.Log($"Analytics service initialized (data collection: {(collectingData ? "ON" : "OFF")})");
 
             // Apply the loaded consent setting (don't save again since we just loaded)
@@ -70,7 +67,7 @@ public class GameAnalytics : MonoBehaviour
                 break;
             case CONSENT_NOT_SET:
             default:
-                collectingData = false; // Default to false for privacy
+                collectingData = DEFAULT_ANALYTICS_CONSENT; // Default value
                 Debug.Log("Analytics consent not set - defaulting to disabled");
                 break;
         }
