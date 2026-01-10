@@ -1,0 +1,3 @@
+-keep class com.android.billingclient.** { *; }
+-keep class com.unity.purchasing.** { *; }
+-keep class com.unity3d.player.** { *; }

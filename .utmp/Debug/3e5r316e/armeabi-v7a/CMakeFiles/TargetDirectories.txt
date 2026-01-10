@@ -1,0 +1,5 @@
+C:/Users/adadi/RightClick_Unity6_Core/.utmp/Debug/3e5r316e/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/adadi/RightClick_Unity6_Core/.utmp/Debug/3e5r316e/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Users/adadi/RightClick_Unity6_Core/.utmp/Debug/3e5r316e/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/adadi/RightClick_Unity6_Core/.utmp/Debug/3e5r316e/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/adadi/RightClick_Unity6_Core/.utmp/Debug/3e5r316e/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir
